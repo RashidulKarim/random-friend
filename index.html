@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Friend</title>
+    <script
+      src="https://kit.fontawesome.com/c5f02a4ef6.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      img {
+        width: 100%;
+      }
+      .icon {
+        margin-right: 10px;
+      }
+      .icon:hover {
+        background-color: black;
+        color: white;
+        transform: scale(120%);
+      }
+      .fas {
+        font-size: 20px;
+        padding: 5px;
+      }
+      .next-btn {
+        width: 120px;
+        margin: 30px auto;
+      }
+      .user-info-btn {
+        width: 400px;
+        margin: 20px auto;
+      }
+      .nextBtn {
+        padding: 10px 15px;
+        background-color: #242f40;
+        color: rgb(255, 246, 246);
+      }
+      .nextBtn:hover {
+        background-color: #e1b07e;
+        color: #361d2e;
+      }
+      .container {
+        background-color: #ecdcc9;
+        padding: 20px 0px;
+      }
+      .btnContainer {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="imageContainer"></div>
+      <div id="description"></div>
+      <div id="btnContainer" class="btnContainer">
+        <div id="user-info-btn" class="user-info-btn">
+          <button id="name" onmouseover="outputInfo(this)" class="icon">
+            <i class="fas fa-user"></i>
+          </button>
+          <button onmouseover="outputInfo(this)" id="email" class="icon">
+            <i class="fas fa-envelope"></i>
+          </button>
+          <button onmouseover="outputInfo(this)" id="birth" class="icon">
+            <i class="fas fa-calendar-week"></i>
+          </button>
+          <button onmouseover="outputInfo(this)" id="address" class="icon">
+            <i class="fas fa-map-marked-alt"></i>
+          </button>
+          <button onmouseover="outputInfo(this)" id="phone" class="icon">
+            <i class="fas fa-phone-alt"></i>
+          </button>
+          <button onmouseover="outputInfo(this)" id="password" class="icon">
+            <i class="fas fa-lock"></i>
+          </button>
+        </div>
+        <div class="next-btn">
+          <button class="nextBtn" onclick="loadFriend()">Next Friend</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/random.js"></script>
+  </body>
+</html>
